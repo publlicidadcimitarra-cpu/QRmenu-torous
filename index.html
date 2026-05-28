@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Menú</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:black;
+overflow:hidden; /* bloquea scroll vertical */
+}
+
+/* MENU FLOTANTE */
+
+/* MENU FLOTANTE DESLIZABLE */
+
+.menu{
+position:fixed;
+top:10px;
+left:0;
+width:100%;
+display:flex;
+gap:10px;
+padding:10px;
+overflow-x:auto;
+overflow-y:hidden;
+white-space:nowrap;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(5px);
+z-index:999;
+}
+
+/* OCULTAR BARRA DE SCROLL */
+
+.menu::-webkit-scrollbar{
+display:none;
+}
+
+.menu a{
+flex:0 0 auto;
+background:#FFD400;
+color:black;
+text-decoration:none;
+padding:8px 14px;
+border-radius:8px;
+font-weight:bold;
+font-size:14px;
+}
+
+/* CONTENEDOR */
+
+.slider{
+display:flex;
+height:100vh;
+overflow-x:auto;
+overflow-y:hidden;
+scroll-snap-type:x mandatory;
+scroll-behavior:smooth;
+}
+
+/* PAGINAS */
+
+.pagina{
+flex:0 0 100%;
+height:100vh;
+scroll-snap-align:start;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+/* IMAGENES */
+
+.pagina img{
+max-width:100%;
+max-height:85vh;
+object-fit:contain;
+}
+
+/* LOGO */
+
+.logo{
+width:220px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- MENU -->
+
+<div class="menu">
+
+<a href="#p1">Micheladas</a>
+<a href="#p4">Granizados</a>
+<a href="#p12">Antojos</a>
+<a href="#p15">Comidas</a>
+<a href="#p18">Hamburguesas</a>
+<a href="#p26">Picadas</a>
+<a></a>
+</div>
+
+
+<!-- SLIDER -->
+
+<div class="slider">
+
+<div class="pagina">
+<img src="logo.png" class="logo">
+</div>
+
+<div id="p1" class="pagina"><img src="1.jpg"></div>
+<div class="pagina"><img src="2.jpg"></div>
+<div class="pagina"><img src="3.jpg"></div>
+
+<div id="p4" class="pagina"><img src="4.jpg"></div>
+<div class="pagina"><img src="5.jpg"></div>
+<div class="pagina"><img src="6.jpg"></div>
+<div class="pagina"><img src="7.jpg"></div>
+<div class="pagina"><img src="8.jpg"></div>
+<div class="pagina"><img src="9.jpg"></div>
+<div class="pagina"><img src="10.jpg"></div>
+<div class="pagina"><img src="11.jpg"></div>
+
+<div id="p12" class="pagina"><img src="12.jpg"></div>
+<div class="pagina"><img src="13.jpg"></div>
+<div class="pagina"><img src="14.jpg"></div>
+
+<div id="p15" class="pagina"><img src="15.jpg"></div>
+<div class="pagina"><img src="16.jpg"></div>
+<div class="pagina"><img src="17.jpg"></div>
+
+<div id="p18" class="pagina"><img src="18.jpg"></div>
+<div class="pagina"><img src="19.jpg"></div>
+<div class="pagina"><img src="20.jpg"></div>
+<div class="pagina"><img src="21.jpg"></div>
+<div class="pagina"><img src="22.jpg"></div>
+<div class="pagina"><img src="23.jpg"></div>
+<div class="pagina"><img src="24.jpg"></div>
+<div class="pagina"><img src="25.jpg"></div>
+
+<div id="p26" class="pagina"><img src="26.jpg"></div>
+<div class="pagina"><img src="27.jpg"></div>
+
+</div>
+
+</body>
+</html>
